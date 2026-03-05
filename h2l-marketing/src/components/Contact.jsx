@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaPaperPlane, FaCheckCircle } from 'react-icons/fa';
 
 const Contact = () => {
-  const clientEmail = "kakzumooto22@gmail.com"; 
+  const clientEmail = "diann1397@gmil.com"; 
   const [enviado, setEnviado] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -19,7 +19,7 @@ const Contact = () => {
       if (response.ok) {
         setEnviado(true);
         form.reset();
-        // El mensaje de éxito se queda 6 segundos
+        // El mensaje de éxito se queda 5 segundos
         setTimeout(() => setEnviado(false), 5000);
       }
     } catch (error) {
