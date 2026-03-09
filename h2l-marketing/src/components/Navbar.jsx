@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
-import logo from '../assets/h2l.jpg';
+import logo from '../assets/clickMarketing.jpeg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-md z-[100]">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-6 h-25 flex justify-between items-center">
         {/* Logo a la izquierda */}
         <div className="flex items-center">
-          <img src={logo} alt="H2L Logo" className="h-12 w-auto object-contain" />
+          <img src={logo} alt="Click Marketing" className="h-25 w-auto object-contain" />
         </div>
 
         {/* Menú Desktop */}

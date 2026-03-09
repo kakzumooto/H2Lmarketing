@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaPaperPlane, FaCheckCircle } from 'react-icons/fa';
+// Añadimos los iconos de redes sociales
+import { FaWhatsapp, FaEnvelope, FaInstagram, FaTiktok, FaPaperPlane, FaCheckCircle, FaQrcode } from 'react-icons/fa';
 
 const Contact = () => {
   const clientEmail = "diann1397@gmil.com"; 
@@ -19,7 +20,6 @@ const Contact = () => {
       if (response.ok) {
         setEnviado(true);
         form.reset();
-        // El mensaje de éxito se queda 5 segundos
         setTimeout(() => setEnviado(false), 5000);
       }
     } catch (error) {
@@ -40,33 +40,48 @@ const Contact = () => {
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Info de Contacto */}
-          <div data-aos="fade-right" className="space-y-8">
+          <div data-aos="fade-right" className="space-y-6">
             <div className="bg-gray-50 p-8 rounded-3xl border-l-8 border-[#E30613] shadow-sm">
               <h3 className="text-2xl font-bold mb-6 text-[#333333] font-montserrat">Canales Directos</h3>
-              <div className="flex items-center gap-4">
-                <div className="bg-white p-4 rounded-2xl shadow-md text-[#E30613]"><FaEnvelope size={20}/></div>
-                <p className="font-bold text-gray-700">{clientEmail}</p>
+              
+              <div className="space-y-4">
+                <div className="flex items-center gap-4">
+                  <div className="bg-white p-4 rounded-2xl shadow-md text-[#E30613]"><FaEnvelope size={20}/></div>
+                  <p className="font-bold text-gray-700">{clientEmail}</p>
+                </div>
+                
+                <a href="https://wa.me/525588088873" className="w-full bg-[#25D366] text-white flex items-center justify-center gap-3 py-4 rounded-2xl font-black hover:scale-105 transition-all shadow-lg font-montserrat">
+                  <FaWhatsapp size={24}/> WHATSAPP AGENCIA
+                </a>
               </div>
-              <a href="https://wa.me/525588088873" className="mt-10 w-full bg-[#25D366] text-white flex items-center justify-center gap-3 py-4 rounded-2xl font-black hover:scale-105 transition-all shadow-lg font-montserrat">
-                <FaWhatsapp size={24}/> WHATSAPP AGENCIA
-              </a>
+
+              {/* NUEVA SECCIÓN: REDES SOCIALES */}
+              <div className="mt-10">
+                <h4 className="text-sm font-black text-gray-400 uppercase tracking-widest mb-4">Síguenos en Redes</h4>
+                <div className="grid grid-cols-2 gap-4">
+                  <a href="https://www.instagram.com/clickmarketing_mx/" className="flex items-center justify-center gap-2 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white py-3 rounded-xl font-bold hover:opacity-90 transition-all">
+                    <FaInstagram size={20}/> Instagram
+                  </a>
+                  <a href="https://www.tiktok.com/@clickmarketing_mx?_r=1&_t=ZS-94RvgeSMhUI" className="flex items-center justify-center gap-2 bg-black text-white py-3 rounded-xl font-bold hover:opacity-90 transition-all border-b-2 border-[#ff0050]">
+                    <FaTiktok size={20}/> TikTok
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Formulario Premium */}
           <div data-aos="fade-left" data-aos-delay="200" className="bg-[#333333] p-8 md:p-12 rounded-[2.5rem] shadow-2xl min-h-[460px] flex items-center justify-center relative overflow-hidden">
-            
             {enviado ? (
               <div className="text-center space-y-4 animate-bounce-slow">
                 <FaCheckCircle className="text-[#E30613] text-7xl mx-auto" />
                 <h3 className="text-white text-2xl font-black font-montserrat uppercase">¡Enviado con éxito!</h3>
-                <p className="text-gray-400 font-medium">En breve un consultor de H2L se pondrá en contacto.</p>
+                <p className="text-gray-400 font-medium">En breve un consultor de click Marketing se pondrá en contacto.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="w-full space-y-5 relative z-10">
-                {/* CONFIGURACIÓN PARA CORREO ESTÉTICO */}
-                <input type="hidden" name="_subject" value="NUEVA SOLICITUD - H2L MEDIA & ADS" />
-                <input type="hidden" name="_template" value="table" /> {/* ESTO HACE QUE EL MAIL SE VEA BIEN */}
+                <input type="hidden" name="_subject" value="NUEVA SOLICITUD - click Marketing" />
+                <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_captcha" value="false" />
 
                 <input name="Nombre" type="text" placeholder="Tu Nombre" required className="w-full bg-white/10 border border-white/20 p-4 rounded-xl text-white outline-none focus:border-[#E30613] focus:bg-white/20 transition-all" />
@@ -79,7 +94,6 @@ const Contact = () => {
               </form>
             )}
           </div>
-
         </div>
       </div>
     </section>
