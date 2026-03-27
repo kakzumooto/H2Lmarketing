@@ -68,7 +68,7 @@ const Contact = () => {
                     <FaTiktok size={20}/> TikTok
                   </a>
                   {/* Botón de Facebook añadido */}
-                  <a href="https://www.facebook.com/h2lmediayads/?ref=NONE_xav_ig_profile_page_web#" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-[#1877F2] text-white py-3 rounded-xl font-bold hover:opacity-90 transition-all">
+                  <a href="https://www.facebook.com/clickmkt.mx/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-[#1877F2] text-white py-3 rounded-xl font-bold hover:opacity-90 transition-all">
                     <FaFacebook size={20}/> Facebook
                   </a>
                 </div>
