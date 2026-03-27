@@ -17,7 +17,7 @@ const Footer = () => {
           <p className="font-bold text-white mb-2">Click Marketing</p>
           <p className="text-sm italic">"Creando ideas, creando impacto."</p>
           <div className="mt-6 border-t border-white/10 pt-6">
-            <p className="text-xs">© 2026 HéctorDev Portfolio Project.</p>
+            <p className="text-xs">© 2026 ClickMarketing.</p>
           </div>
         </div>
       </div>

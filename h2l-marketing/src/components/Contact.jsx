@@ -1,9 +1,10 @@
 import { useState } from 'react';
-// Añadimos los iconos de redes sociales
-import { FaWhatsapp, FaEnvelope, FaInstagram, FaTiktok, FaPaperPlane, FaCheckCircle, FaQrcode } from 'react-icons/fa';
+// Añadimos FaFacebook a las importaciones
+import { FaWhatsapp, FaEnvelope, FaInstagram, FaTiktok, FaPaperPlane, FaCheckCircle, FaFacebook } from 'react-icons/fa';
 
 const Contact = () => {
-  const clientEmail = "diann1397@gmil.com"; 
+  // Correo actualizado
+  const clientEmail = "hola@clickmkt.com.mx"; 
   const [enviado, setEnviado] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -50,20 +51,25 @@ const Contact = () => {
                   <p className="font-bold text-gray-700">{clientEmail}</p>
                 </div>
                 
-                <a href="https://wa.me/525588088873" className="w-full bg-[#25D366] text-white flex items-center justify-center gap-3 py-4 rounded-2xl font-black hover:scale-105 transition-all shadow-lg font-montserrat">
-                  <FaWhatsapp size={24}/> WHATSAPP AGENCIA
+                {/* WhatsApp Actualizado */}
+                <a href="https://wa.me/525523240005" target="_blank" rel="noopener noreferrer" className="w-full bg-[#25D366] text-white flex items-center justify-center gap-3 py-4 rounded-2xl font-black hover:scale-105 transition-all shadow-lg font-montserrat">
+                  <FaWhatsapp size={24}/> WHATSAPP
                 </a>
               </div>
 
-              {/* NUEVA SECCIÓN: REDES SOCIALES */}
+              {/* SECCIÓN REDES SOCIALES ACTUALIZADA */}
               <div className="mt-10">
                 <h4 className="text-sm font-black text-gray-400 uppercase tracking-widest mb-4">Síguenos en Redes</h4>
-                <div className="grid grid-cols-2 gap-4">
-                  <a href="https://www.instagram.com/clickmarketing_mx/" className="flex items-center justify-center gap-2 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white py-3 rounded-xl font-bold hover:opacity-90 transition-all">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <a href="https://www.instagram.com/clickmarketing_mx/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white py-3 rounded-xl font-bold hover:opacity-90 transition-all">
                     <FaInstagram size={20}/> Instagram
                   </a>
-                  <a href="https://www.tiktok.com/@clickmarketing_mx?_r=1&_t=ZS-94RvgeSMhUI" className="flex items-center justify-center gap-2 bg-black text-white py-3 rounded-xl font-bold hover:opacity-90 transition-all border-b-2 border-[#ff0050]">
+                  <a href="https://www.tiktok.com/@clickmarketing_mx?_r=1&_t=ZS-94RvgeSMhUI" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-black text-white py-3 rounded-xl font-bold hover:opacity-90 transition-all border-b-2 border-[#ff0050]">
                     <FaTiktok size={20}/> TikTok
+                  </a>
+                  {/* Botón de Facebook añadido */}
+                  <a href="https://www.facebook.com/h2lmediayads/?ref=NONE_xav_ig_profile_page_web#" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-[#1877F2] text-white py-3 rounded-xl font-bold hover:opacity-90 transition-all">
+                    <FaFacebook size={20}/> Facebook
                   </a>
                 </div>
               </div>
@@ -76,11 +82,11 @@ const Contact = () => {
               <div className="text-center space-y-4 animate-bounce-slow">
                 <FaCheckCircle className="text-[#E30613] text-7xl mx-auto" />
                 <h3 className="text-white text-2xl font-black font-montserrat uppercase">¡Enviado con éxito!</h3>
-                <p className="text-gray-400 font-medium">En breve un consultor de click Marketing se pondrá en contacto.</p>
+                <p className="text-gray-400 font-medium">En breve un consultor de Click Marketing se pondrá en contacto.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="w-full space-y-5 relative z-10">
-                <input type="hidden" name="_subject" value="NUEVA SOLICITUD - click Marketing" />
+                <input type="hidden" name="_subject" value="NUEVA SOLICITUD - Click Marketing" />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_captcha" value="false" />
 
